@@ -4,11 +4,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class CalculatorLinkedList {
     public static void main(String[] args) {
         File file = new File(args[0]);
         List<Integer> ln = new LinkedList<Integer>();
-        MediaAritmetica mediaAritmetica = new MediaAritmetica(ln);
         DesvEstandar desvEstandar = new DesvEstandar(ln);
 
         Scanner scanner = null;
@@ -20,6 +19,7 @@ public class Main {
                 int num = Integer.parseInt(line);
                 ln.add(num);
             }
+            desvEstandar.printDesvEstandar();
 
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
