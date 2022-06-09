@@ -7,19 +7,19 @@ import java.util.Scanner;
 public class CalculatorLinkedList {
     public static void main(String[] args) {
         File file = new File(args[0]);
-        List<Integer> ln = new LinkedList<Integer>();
-        DesvEstandar desvEstandar = new DesvEstandar(ln);
+        List<Double> ln = new LinkedList<Double>();
+        MeanDesvEstan meanDesvEstan = new MeanDesvEstan(ln);
 
         Scanner scanner = null;
         try {
             scanner = new Scanner(file);
-            int cont = 0;
             while(scanner.hasNextLine()){
                 String line = scanner.nextLine();
-                int num = Integer.parseInt(line);
+                double num = Double.parseDouble(line);
                 ln.add(num);
             }
-            desvEstandar.printDesvEstandar();
+            meanDesvEstan.printDesvEstandar(ln);
+            meanDesvEstan.printMean(ln);
 
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
