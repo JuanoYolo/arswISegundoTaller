@@ -1,4 +1,6 @@
-package linkedJavaList;
+package myOwnLinkedList;
+
+import linkedJavaList.MeanDesvEstan;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -6,14 +8,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * Clase que recibe un archivo de tipo texto para leer numeros y retornar su desv Estandar y su Promedio
- */
-public class CalculatorLinkedList {
+public class CalculatorMyLinkedList {
+
     public static void main(String[] args) {
         File file = new File(args[0]);
-        List<Double> ln = new LinkedList<Double>();
-        MeanDesvEstan meanDesvEstan = new MeanDesvEstan(ln);
+        //MyLinkedList ln = new MyLinkedList<Double>();
+        //MeanDesvEstanOther meanDesvEstanOther= new MeanDesvEstanOther(ln);
 
         Scanner scanner = null;
         try {
@@ -21,15 +21,13 @@ public class CalculatorLinkedList {
             while(scanner.hasNextLine()){
                 String line = scanner.nextLine();
                 double num = Double.parseDouble(line);
-                ln.add(num);
+                //ln.add(num);
             }
-            meanDesvEstan.printDesvEstandar(ln);
-            meanDesvEstan.printMean(ln);
+            //meanDesvEstanOther.printDesvEstandar(ln);
+           //meanDesvEstanOther.printMean(ln);
 
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
-
 }
-

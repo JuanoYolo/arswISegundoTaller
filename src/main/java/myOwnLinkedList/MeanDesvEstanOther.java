@@ -1,19 +1,12 @@
-package linkedJavaList;
+package myOwnLinkedList;
 
 import java.util.List;
 
-/**
- * Clase que calcula la desv Estandar y el promedio de una lista de numeros
- */
-public class MeanDesvEstan {
+public class MeanDesvEstanOther {
 
-    public MeanDesvEstan(List<Double> ln) {
+    public MeanDesvEstanOther(List<Double> ln) {
     }
 
-    /**
-     * Metodo que calcula de la desv Estandar
-     * @param ln LinkedList que trae la lista de numeros
-     */
     public void printDesvEstandar(List<Double> ln){
         double cont = 0;
         double cont1 = 0;
@@ -31,13 +24,9 @@ public class MeanDesvEstan {
         }
         res = (cont1/ ln.size());
         double desvEstandar = Math.sqrt(res);
-        System.out.printf("La desviacion estandar es: %.2f \n",desvEstandar);
+        System.out.println("La desviacion estandar es: " + desvEstandar);
     }
 
-    /**
-     * Metodo que calcula el promedio
-     * @param ln LinkedList que trae la lista de numeros
-     */
     public void printMean(List<Double> ln){
         double cont = 0;
         for (int i = 0; i < ln.size(); i++) {
@@ -45,7 +34,7 @@ public class MeanDesvEstan {
             cont += num;
         }
         double promedio = (cont/ln.size());
-        System.out.printf("El promedio es: %.2f \n", promedio);
+        System.out.println("El promedio es: " + promedio);
     }
 }
 
