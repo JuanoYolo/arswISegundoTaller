@@ -5,7 +5,7 @@
 - Juan Monroy
 
 ### Fecha
-- 10 Marzo 2022
+- 10 Junio 2022
 
 ## Diagrama de clases
 ![Diagrama](img/diagramaClases.png)
